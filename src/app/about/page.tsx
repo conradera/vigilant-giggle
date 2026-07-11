@@ -9,17 +9,9 @@ export default function About() {
     <div className="-mt-20">
       {/* Hero Section — full viewport, single image, no carousel */}
       <section className="relative h-screen w-full overflow-hidden bg-deep-forest">
-        {/* Background image */}
+        {/* Solid background */}
         <div className="absolute inset-0 z-0">
-          <Image
-            alt="NIM Paints Manufacturing Facility"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-            src="/properties/2S0B9628.JPG"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-deep-forest via-deep-forest to-leaf-green/20"></div>
         </div>
 
         {/* Bottom content overlay */}

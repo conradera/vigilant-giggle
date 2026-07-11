@@ -89,7 +89,7 @@ export default function Home() {
             priority
             sizes="100vw"
             className="object-cover"
-            src="/properties/2S0B9628.JPG"
+            src="/hero-main.png"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
         </div>
@@ -272,13 +272,10 @@ export default function Home() {
           </ScrollReveal>
 
           {/* Staircase cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 items-end">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {processSteps.map((step, i) => (
               <ScrollReveal key={step.title} delay={i * 100}>
-                <div
-                  className="bg-surface-container-lowest border border-outline/10 rounded-2xl p-6 relative"
-                  style={{ marginBottom: `${(processSteps.length - 1 - i) * 20}px` }}
-                >
+                <div className="bg-surface-container-lowest border border-outline/10 rounded-2xl p-6 h-full">
                   {/* Time badge */}
                   <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-leaf-green/15 text-leaf-green text-xs font-bold mb-4">
                     {i + 1}
