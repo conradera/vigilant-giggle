@@ -1,0 +1,132 @@
+﻿"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/products", label: "Products" },
+  { href: "/projects", label: "Gallery" },
+  { href: "/color-visualizer", label: "Visualizer" },
+  { href: "/paint-calculator", label: "Calculator" },
+  { href: "/contact", label: "Contact" },
+];
+
+export default function Header() {
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const isHome = pathname === "/";
+  const hasFullHero = pathname === "/" || pathname === "/about" || pathname === "/products" || pathname === "/projects" || pathname === "/paint-calculator" || pathname === "/contact" || pathname === "/color-visualizer";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
+  // Pages with full-bleed hero: transparent when at top, pill when scrolled
+  // Other pages: always pill/solid
+  const isTransparent = hasFullHero && !scrolled && !menuOpen;
+
+  return (
+    <nav
+      className={`w-full fixed top-0 z-50 transition-all duration-500 ${
+        isTransparent
+          ? "bg-transparent border-b border-white/10"
+          : "md:top-4 md:left-1/2 md:-translate-x-1/2 md:w-[95%] md:max-w-7xl md:rounded-full bg-white/95 backdrop-blur-md border border-gray-200 shadow-lg"
+      }`}
+    >
+      <div className={`max-w-container-max mx-auto flex justify-between items-center px-gutter ${isTransparent ? "h-20" : "h-16"}`}>
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Image
+            src="/nim-logo-site-600x135.png"
+            alt="NIM Paints"
+            width={160}
+            height={36}
+            className="h-8 sm:h-10 w-auto"
+            priority
+          />
+        </Link>
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={
+                isActive(link.href)
+                  ? `font-bold border-b-2 pb-1 text-sm tracking-wide transition-colors duration-200 ${
+                      isTransparent ? "text-white border-white" : "text-black border-flame-gold"
+                    }`
+                  : `text-sm tracking-wide transition-colors duration-200 ${
+                      isTransparent
+                        ? "text-white/80 hover:text-white"
+                        : "text-black/70 hover:text-black"
+                    }`
+              }
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact#distributor-network"
+            className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all active:scale-95 shrink-0 ${
+              isTransparent
+                ? "bg-white/10 text-white border border-white/30 hover:bg-white/20"
+                : "bg-black text-white hover:bg-black/80"
+            }`}
+          >
+            Find Distributor
+          </Link>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${isTransparent ? "bg-white" : "bg-deep-forest"} ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${isTransparent ? "bg-white" : "bg-deep-forest"} ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${isTransparent ? "bg-white" : "bg-deep-forest"} ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[80vh] border-t border-gray-200" : "max-h-0"}`}>
+        <div className="px-gutter py-6 flex flex-col gap-4 bg-white">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className={
+                isActive(link.href)
+                  ? "text-black font-bold text-sm tracking-wide py-2"
+                  : "text-black/60 hover:text-black text-sm tracking-wide py-2"
+              }
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link href="/contact#distributor-network" onClick={() => setMenuOpen(false)} className="bg-primary hover:bg-leaf-green text-on-primary px-5 py-3 rounded-lg text-xs font-bold uppercase tracking-widest transition-transform active:scale-95 mt-2">
+            Find Distributor
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
