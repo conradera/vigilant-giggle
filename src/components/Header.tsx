@@ -45,7 +45,7 @@ export default function Header() {
       className={`w-full fixed top-0 z-50 transition-all duration-500 ${
         isTransparent
           ? "bg-transparent border-b border-white/10"
-          : "md:top-4 md:left-1/2 md:-translate-x-1/2 md:w-[95%] md:max-w-7xl md:rounded-full bg-white/95 backdrop-blur-md border border-gray-200 shadow-lg"
+          : "bg-white border-b border-gray-200 shadow-sm"
       }`}
     >
       <div className={`max-w-container-max mx-auto flex justify-between items-center px-gutter ${isTransparent ? "h-20" : "h-16"}`}>
@@ -69,12 +69,12 @@ export default function Header() {
               className={
                 isActive(link.href)
                   ? `font-bold border-b-2 pb-1 text-sm tracking-wide transition-colors duration-200 ${
-                      isTransparent ? "text-white border-white" : "text-black border-flame-gold"
+                      isTransparent ? "text-white border-white" : "text-deep-forest border-flame-gold"
                     }`
                   : `text-sm tracking-wide transition-colors duration-200 ${
                       isTransparent
                         ? "text-white/80 hover:text-white"
-                        : "text-black/70 hover:text-black"
+                        : "text-deep-forest/70 hover:text-deep-forest"
                     }`
               }
             >
@@ -86,7 +86,7 @@ export default function Header() {
             className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all active:scale-95 shrink-0 ${
               isTransparent
                 ? "bg-white/10 text-white border border-white/30 hover:bg-white/20"
-                : "bg-black text-white hover:bg-black/80"
+                : "bg-deep-forest text-white hover:bg-deep-forest/80"
             }`}
           >
             Find Distributor
@@ -115,8 +115,8 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className={
                 isActive(link.href)
-                  ? "text-black font-bold text-sm tracking-wide py-2"
-                  : "text-black/60 hover:text-black text-sm tracking-wide py-2"
+                  ? "text-deep-forest font-bold text-sm tracking-wide py-2"
+                  : "text-deep-forest/60 hover:text-deep-forest text-sm tracking-wide py-2"
               }
             >
               {link.label}

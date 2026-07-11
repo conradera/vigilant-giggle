@@ -227,7 +227,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-[400px] md:h-[600px] lg:h-auto group overflow-hidden bg-surface-container hidden lg:block lg:order-2">
-            <Image alt="NIM Paints Range" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" src="/upscaled%20product%20section.png" />
+            <Image alt="NIM Paints Range" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-[center_60%] transition-transform duration-1000 group-hover:scale-105" src="/upscaled%20product%20section.png" />
           </div>
         </div>
       </section>
@@ -260,15 +260,6 @@ export default function Home() {
       {/* Process Section */}
       <section className="py-section-padding bg-white overflow-hidden">
         <div className="max-w-container-max mx-auto px-gutter">
-          {/* Section label */}
-          <ScrollReveal>
-          <div className="flex items-center gap-3 mb-10">
-            <span className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-xs text-on-surface-variant font-medium">02</span>
-            <span className="text-sm text-on-surface-variant">Process timeline</span>
-          </div>
-          </ScrollReveal>
-
-          {/* Header: title left, description right */}
           <ScrollReveal>
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-20 md:mb-28">
             <h2 className="font-display-lg text-4xl md:text-5xl lg:text-6xl text-deep-forest tracking-tight leading-tight">
@@ -300,19 +291,6 @@ export default function Home() {
                   <p className="text-on-surface-variant text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Decorative bottom bar */}
-          <div className="mt-16 flex justify-center items-center gap-0 overflow-hidden">
-            {Array.from({ length: 18 }).map((_, i) => (
-              <div
-                key={i}
-                className="w-10 h-10 md:w-14 md:h-14 rounded-full -ml-2 first:ml-0"
-                style={{
-                  backgroundColor: `rgba(30, 120, 60, ${0.1 + (i % 4) * 0.08})`,
-                }}
-              />
             ))}
           </div>
         </div>
@@ -385,57 +363,39 @@ export default function Home() {
             <h2 className="font-display-lg text-4xl md:text-5xl text-deep-forest">Beyond the Paint Can</h2>
           </div>
 
-          {/* Bento grid: 2 cards left, image center, 2 cards right */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-            {/* Left column - 2 cards */}
-            <div className="flex flex-col gap-6">
-              <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
-                <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined text-lg text-white">search_insights</span>
-                </div>
-                <p className="text-deep-forest text-sm md:text-base leading-relaxed">
-                  <span className="font-bold">Site Inspection</span> Our technical team visits your project site to assess substrate conditions and recommend the right coating system.
-                </p>
+          {/* 2x2 grid of cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
+              <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
+                <span className="material-symbols-outlined text-lg text-white">search_insights</span>
               </div>
-              <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
-                <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined text-lg text-white">school</span>
-                </div>
-                <p className="text-deep-forest text-sm md:text-base leading-relaxed">
-                  <span className="font-bold">On-Site Training</span> We train your applicators on proper surface preparation, mixing ratios, and application techniques.
-                </p>
-              </div>
+              <p className="text-deep-forest text-sm md:text-base leading-relaxed">
+                <span className="font-bold">Site Inspection</span> Our technical team visits your project site to assess substrate conditions and recommend the right coating system.
+              </p>
             </div>
-
-            {/* Center image */}
-            <div className="hidden lg:block relative h-[420px] rounded-2xl overflow-hidden">
-              <Image
-                src="/properties/2S0B9296.JPG"
-                alt="NIM Paints Services"
-                fill
-                sizes="(max-width: 1024px) 100vw, 33vw"
-                className="object-cover"
-              />
+            <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
+              <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
+                <span className="material-symbols-outlined text-lg text-white">support</span>
+              </div>
+              <p className="text-deep-forest text-sm md:text-base leading-relaxed">
+                <span className="font-bold">Free Technical Advice</span> Expert guidance on product selection, colour matching, and project planning — no obligation.
+              </p>
             </div>
-
-            {/* Right column - 2 cards */}
-            <div className="flex flex-col gap-6">
-              <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
-                <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined text-lg text-white">support</span>
-                </div>
-                <p className="text-deep-forest text-sm md:text-base leading-relaxed">
-                  <span className="font-bold">Free Technical Advice</span> Expert guidance on product selection, colour matching, and project planning — no obligation.
-                </p>
+            <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
+              <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
+                <span className="material-symbols-outlined text-lg text-white">school</span>
               </div>
-              <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
-                <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined text-lg text-white">colorize</span>
-                </div>
-                <p className="text-deep-forest text-sm md:text-base leading-relaxed">
-                  <span className="font-bold">Colour Matching</span> Computerized spectrophotometer matching ensures your exact colour specification is replicated perfectly.
-                </p>
+              <p className="text-deep-forest text-sm md:text-base leading-relaxed">
+                <span className="font-bold">On-Site Training</span> We train your applicators on proper surface preparation, mixing ratios, and application techniques.
+              </p>
+            </div>
+            <div className="bg-[#f3f2ef] rounded-2xl p-6 md:p-8">
+              <div className="w-10 h-10 rounded-xl bg-deep-forest flex items-center justify-center mb-6">
+                <span className="material-symbols-outlined text-lg text-white">colorize</span>
               </div>
+              <p className="text-deep-forest text-sm md:text-base leading-relaxed">
+                <span className="font-bold">Colour Matching</span> Computerized spectrophotometer matching ensures your exact colour specification is replicated perfectly.
+              </p>
             </div>
           </div>
         </div>
@@ -475,27 +435,6 @@ export default function Home() {
         </div>
       </section>
       </ScrollReveal>
-
-      {/* Partner Logos Section */}
-      <section className="py-section-padding bg-surface-container-lowest">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
-            {["centenary-bank", "habib", "job-connect", "mirage", "water", "partner-logo-1", "partner-logo-2"].map((logo) => (
-              <ScrollReveal key={logo}>
-              <div className="group relative flex items-center justify-center">
-                <Image
-                  src={logo.startsWith("partner-logo") ? `/${logo}.jpeg` : `/${logo}-768x427.png`}
-                  alt={`${logo.replace(/-/g, " ")} logo`}
-                  width={192}
-                  height={107}
-                  className="w-auto h-12 md:h-16 object-contain transition-all duration-500 ease-out group-hover:scale-105 mix-blend-multiply"
-                />
-              </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-section-padding bg-surface">

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { palettes } from "@/data/colors";
-import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const rooms = [
@@ -192,24 +191,6 @@ export default function ColorVisualizer() {
       </section>
       </ScrollReveal>
 
-      {/* Products using this palette */}
-      <ScrollReveal>
-      <section className="py-section-padding bg-surface-container-low">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <h2 className="font-display-lg text-headline-lg text-deep-forest mb-4">Available in These Products</h2>
-          <p className="font-body-lg text-on-surface-variant mb-12">The {selectedColor.name} shade can be ordered in any of our product lines.</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((p) => (
-              <div key={p.slug} className="bg-white p-6 rounded-xl border border-outline/5 hover:shadow-md transition-shadow">
-                <span className={`text-xs font-bold uppercase tracking-widest ${p.badgeColor}`}>{p.badge}</span>
-                <h4 className="font-title-lg text-deep-forest mt-2 mb-2">{p.title}</h4>
-                <a href="/contact#inquiry-form" className="block w-full bg-leaf-green/10 text-leaf-green py-2 rounded font-label-md hover:bg-leaf-green hover:text-white transition-all cursor-pointer text-center">Add to Quote</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      </ScrollReveal>
     </div>
   );
 }
