@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="-mt-20">
       {/* Hero Section — full viewport, single image, no carousel */}
-      <section className="relative h-screen w-full overflow-hidden bg-deep-forest">
+      <section className="relative h-[70vh] w-full overflow-hidden bg-deep-forest">
         {/* Solid background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-deep-forest via-deep-forest to-leaf-green/20"></div>

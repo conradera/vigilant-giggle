@@ -48,14 +48,14 @@ export default function Header() {
           : "bg-white border-b border-gray-200 shadow-sm"
       }`}
     >
-      <div className={`max-w-container-max mx-auto flex justify-between items-center px-gutter ${isTransparent ? "h-20" : "h-16"}`}>
+      <div className={`w-full mx-auto flex justify-between items-center px-4 md:px-gutter ${isTransparent ? "h-20" : "h-16"}`}>
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src="/nim-logo-site-600x135.png"
             alt="NIM Paints"
             width={160}
             height={36}
-            className="h-8 sm:h-10 w-auto"
+            className="h-7 sm:h-8 md:h-10 w-auto"
             priority
           />
         </Link>
@@ -95,7 +95,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+          className="md:hidden flex flex-col gap-1.5 p-3 cursor-pointer shrink-0"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
