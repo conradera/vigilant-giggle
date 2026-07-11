@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { products } from "@/data/products";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -70,15 +69,7 @@ export default function PaintCalculator() {
       {/* Hero */}
       <section className="relative h-[60vh] w-full overflow-hidden bg-deep-forest">
         <div className="absolute inset-0 z-0">
-          <Image
-            alt="Paint Calculator"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-            src="/properties/2S0B9628.JPG"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-deep-forest via-deep-forest to-leaf-green/20"></div>
         </div>
         <div className="absolute inset-x-0 bottom-0 z-10 px-gutter pb-12 md:pb-16">
           <motion.span

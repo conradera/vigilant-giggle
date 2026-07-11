@@ -88,47 +88,38 @@ export default function About() {
           {/* 3 Feature cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <ScrollReveal delay={100}>
-            <div className="bg-white rounded-3xl p-6 border border-leaf-green/10 overflow-hidden">
+            <div className="bg-white rounded-3xl p-6 border border-leaf-green/10">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-bold text-deep-forest text-base">Industry Recognition</h3>
                 <span className="material-symbols-outlined text-lg text-deep-forest">arrow_outward</span>
               </div>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-5">
+              <p className="text-on-surface-variant text-sm leading-relaxed">
                 UNBS certified to US EAS 998:2021 standards, ensuring consistent product excellence across all our ranges.
               </p>
-              <div className="relative h-40 rounded-2xl overflow-hidden bg-leaf-green/5">
-                <img src="/properties/2S0B9296.JPG" alt="Industry recognition" className="w-full h-full object-cover" />
-              </div>
             </div>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-            <div className="bg-deep-forest rounded-3xl p-6 overflow-hidden">
+            <div className="bg-deep-forest rounded-3xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-bold text-white text-base">Competitive Advantage</h3>
                 <span className="material-symbols-outlined text-lg text-white">arrow_outward</span>
               </div>
-              <p className="text-white/70 text-sm leading-relaxed mb-5">
+              <p className="text-white/70 text-sm leading-relaxed">
                 100% Ugandan owned and manufactured, formulated specifically for the high humidity and intense UV of our region.
               </p>
-              <div className="relative h-40 rounded-2xl overflow-hidden">
-                <img src="/textures/CTM19453.jpg" alt="Competitive advantage" className="w-full h-full object-cover" />
-              </div>
             </div>
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
-            <div className="bg-white rounded-3xl p-6 border border-leaf-green/10 overflow-hidden">
+            <div className="bg-white rounded-3xl p-6 border border-leaf-green/10">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-bold text-deep-forest text-base">Commit To Professionalism</h3>
                 <span className="material-symbols-outlined text-lg text-deep-forest">arrow_outward</span>
               </div>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-5">
+              <p className="text-on-surface-variant text-sm leading-relaxed">
                 Free site inspections, on-site training, and technical support ensure perfect application every time.
               </p>
-              <div className="relative h-40 rounded-2xl overflow-hidden bg-leaf-green/5">
-                <img src="/properties/2S0B9481.JPG" alt="Professionalism" className="w-full h-full object-cover" />
-              </div>
             </div>
             </ScrollReveal>
           </div>
