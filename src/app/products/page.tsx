@@ -22,15 +22,7 @@ export default function Products() {
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden bg-deep-forest">
         <div className="absolute inset-0 z-0">
-          <Image
-            alt="NIM Paints Product Range"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-            src="/properties/2S0B9628.JPG"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-deep-forest via-deep-forest to-leaf-green/20"></div>
         </div>
 
         <div className="absolute inset-x-0 bottom-0 z-10 px-gutter pb-12 md:pb-16 lg:pb-20">
@@ -142,94 +134,6 @@ export default function Products() {
           </div>
         </div>
       </section>
-
-      {/* More About Products */}
-      <ScrollReveal>
-        <section className="py-section-padding bg-white">
-          <div className="max-w-container-max mx-auto px-gutter">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Intro text card */}
-              <div className="bg-[#f0f7f1] rounded-3xl p-8 flex flex-col justify-between">
-                <p className="text-deep-forest text-lg md:text-xl leading-relaxed mb-8">
-                  Advanced coating systems engineered for the tropical Ugandan climate.
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 border border-deep-forest/20 rounded-full px-5 py-2.5 text-sm font-medium text-deep-forest hover:bg-deep-forest hover:text-white transition-all w-fit"
-                >
-                  Shop all products <span className="material-symbols-outlined text-base">arrow_forward</span>
-                </Link>
-              </div>
-
-              {/* 3 featured products - one from each category */}
-              {[
-                products.find(p => p.category === "Interior"),
-                products.find(p => p.category === "Exterior"),
-                products.find(p => p.category === "Textured"),
-              ].filter(Boolean).map((product) => (
-                <Link key={product!.slug} href={`/products/${product!.slug}`} className="group block">
-                  <div className="bg-[#f8f8f6] rounded-3xl p-4 mb-4 overflow-hidden">
-                    <div className="relative aspect-square rounded-2xl overflow-hidden">
-                      <img
-                        src={product!.img}
-                        alt={product!.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-xs font-medium px-3 py-1 rounded-full">
-                        {product!.badge}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="px-1">
-                    <h3 className="font-bold text-deep-forest text-base mb-1">{product!.title}</h3>
-                    <p className="text-on-surface-variant text-xs mb-2">{product!.finish}</p>
-                    <p className="text-on-surface-variant text-sm leading-relaxed line-clamp-2">{product!.desc}</p>
-                    <span className="text-leaf-green text-xs font-medium mt-2 inline-block underline underline-offset-2">
-                      learn more
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* More About Products - Image + Text */}
-      <ScrollReveal>
-        <section className="py-section-padding bg-[#f8f8f6]">
-          <div className="max-w-container-max mx-auto px-gutter">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Image */}
-              <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden">
-                <Image
-                  src="/properties/2S0B9628.JPG"
-                  alt="NIM Paints product range"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Content */}
-              <div>
-                <h2 className="font-display-lg text-4xl md:text-5xl text-deep-forest mb-6 tracking-tight">
-                  More about our products
-                </h2>
-                <p className="text-on-surface-variant text-base md:text-lg leading-relaxed mb-8">
-                  NIM Paints combines cutting-edge polymer technology with the specific atmospheric requirements of the tropical sun and equatorial humidity. Every drop is a testament to our commitment to quality, durability, and environmental responsibility.
-                </p>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 border border-deep-forest/20 rounded-full px-6 py-3 text-sm font-medium text-deep-forest hover:bg-deep-forest hover:text-white transition-all"
-                >
-                  get the full story <span className="material-symbols-outlined text-base">arrow_forward</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
 
       {/* Signature Palettes */}
       <ScrollReveal>
