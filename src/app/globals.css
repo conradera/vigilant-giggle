@@ -75,12 +75,12 @@ html::-webkit-scrollbar {
   --font-display-lg: var(--font-display), "Barlow Condensed", sans-serif;
   --font-headline-lg: var(--font-display), "Barlow Condensed", sans-serif;
   --font-headline-md: var(--font-display), "Barlow Condensed", sans-serif;
-  --font-poppins: var(--font-poppins), "Poppins", sans-serif;
-  --font-body-lg: var(--font-body), "DM Sans", sans-serif;
-  --font-body-md: var(--font-body), "DM Sans", sans-serif;
-  --font-title-lg: var(--font-body), "DM Sans", sans-serif;
-  --font-label-lg: var(--font-body), "DM Sans", sans-serif;
-  --font-label-md: var(--font-body), "DM Sans", sans-serif;
+  --font-poppins: var(--font-body), "Poppins", sans-serif;
+  --font-body-lg: var(--font-body), "Poppins", sans-serif;
+  --font-body-md: var(--font-body), "Poppins", sans-serif;
+  --font-title-lg: var(--font-body), "Poppins", sans-serif;
+  --font-label-lg: var(--font-body), "Poppins", sans-serif;
+  --font-label-md: var(--font-body), "Poppins", sans-serif;
 
   --spacing-gutter: 24px;
   --spacing-stack-sm: 8px;

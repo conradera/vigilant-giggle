@@ -21,15 +21,15 @@ export default function Footer() {
             {/* Right: email form */}
             <div>
               <p className="text-white/50 text-xs mb-3">Stay up to date</p>
-              <form className="flex gap-3">
+              <form className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 text-sm focus:ring-2 focus:ring-leaf-green outline-none w-56 md:w-64"
+                  className="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 text-sm focus:ring-2 focus:ring-leaf-green outline-none w-full"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-full bg-leaf-green text-deep-forest font-bold text-sm hover:bg-leaf-green/90 transition-all cursor-pointer"
+                  className="px-6 py-3 rounded-full bg-leaf-green text-deep-forest font-bold text-sm hover:bg-leaf-green/90 transition-all cursor-pointer whitespace-nowrap"
                 >
                   Subscribe
                 </button>

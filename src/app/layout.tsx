@@ -1,26 +1,20 @@
 ﻿import type { Metadata } from "next";
-import { Barlow_Condensed, DM_Sans, Poppins } from "next/font/google";
+import { Barlow_Condensed, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import ScrollToHash from "@/components/ScrollToHash";
 
-const barlowCondensed = Barlow_Condensed({
-  weight: ["600", "700"],
-  variable: "--font-display",
-  subsets: ["latin"],
-});
-
-const dmSans = DM_Sans({
-  weight: ["400", "500", "700"],
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-body",
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
-  weight: ["700", "800", "900"],
-  variable: "--font-poppins",
+const barlowCondensed = Barlow_Condensed({
+  weight: ["600", "700"],
+  variable: "--font-display",
   subsets: ["latin"],
 });
 
@@ -35,7 +29,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const fontClass = `${barlowCondensed.variable} ${dmSans.variable} ${poppins.variable}`;
+  const fontClass = `${barlowCondensed.variable} ${poppins.variable}`;
   return (
     <html lang="en" className={fontClass}>
       <head>

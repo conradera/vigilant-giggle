@@ -487,16 +487,16 @@ export default function Home() {
       {/* Partner Logos Section */}
       <section className="py-section-padding bg-surface-container-lowest">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-12 xl:gap-16 items-center justify-items-center">
-            {["centenary-bank", "habib", "job-connect", "mirage", "water"].map((logo) => (
+          <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+            {["centenary-bank", "habib", "job-connect", "mirage", "water", "partner-logo-1", "partner-logo-2"].map((logo) => (
               <ScrollReveal key={logo}>
-              <div className="group relative w-full flex items-center justify-center">
+              <div className="group relative flex items-center justify-center">
                 <Image
-                  src={`/${logo}-768x427.png`}
+                  src={logo.startsWith("partner-logo") ? `/${logo}.jpeg` : `/${logo}-768x427.png`}
                   alt={`${logo.replace(/-/g, " ")} logo`}
                   width={192}
                   height={107}
-                  className="w-auto h-16 md:h-20 object-contain transition-all duration-500 ease-out group-hover:scale-105"
+                  className="w-auto h-12 md:h-16 object-contain transition-all duration-500 ease-out group-hover:scale-105 mix-blend-multiply"
                 />
               </div>
               </ScrollReveal>
