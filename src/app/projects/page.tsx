@@ -72,7 +72,7 @@ export default function Projects() {
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden bg-deep-forest">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#14331A] via-deep-forest to-[#1D5A28]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1D8A35] via-[#14662A] to-[#0D4A1E]"></div>
         </div>
 
         <div className="absolute inset-x-0 bottom-0 z-10 px-gutter pb-12 md:pb-20 lg:pb-24">

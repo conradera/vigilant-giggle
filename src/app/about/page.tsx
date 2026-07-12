@@ -11,7 +11,7 @@ export default function About() {
       <section className="relative h-[70vh] w-full overflow-hidden bg-deep-forest">
         {/* Solid background with gradient */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-deep-forest via-[#1A3D1F] to-[#0D4A2B]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1A3D1F] via-[#1D8A35] to-[#0D4A2B]"></div>
         </div>
 
         {/* Bottom content overlay */}

@@ -22,7 +22,7 @@ export default function Products() {
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden bg-deep-forest">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1A3D1F] via-deep-forest to-[#0A2E14]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#4A1A8A] via-[#6820B8] to-[#3D0E70]"></div>
         </div>
 
         <div className="absolute inset-x-0 bottom-0 z-10 px-gutter pb-12 md:pb-20 lg:pb-24">
